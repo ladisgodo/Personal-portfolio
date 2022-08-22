@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./nav.css";
-import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
+import { AiOutlineHome, AiOutlineUser, AiOutlineFolderOpen } from "react-icons/ai";
 import { BsBriefcase } from "react-icons/bs";
 import { BiMessageSquareDetail } from "react-icons/bi";
 
@@ -24,11 +24,18 @@ function Nav() {
         <AiOutlineUser />
       </a>
       <a
+        href="#skills"
+        onClick={() => setActiveNav("#skills")}
+        className={activeNav === "#skills" ? "active" : ""}
+      >
+        <BsBriefcase />
+      </a>
+      <a
         href="#portfolio"
         onClick={() => setActiveNav("#portfolio")}
         className={activeNav === "#portfolio" ? "active" : ""}
       >
-        <BsBriefcase />
+        <AiOutlineFolderOpen />
       </a>
       <a
         href="#contact"
